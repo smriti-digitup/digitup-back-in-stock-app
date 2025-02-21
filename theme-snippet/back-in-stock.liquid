@@ -1,0 +1,22 @@
+{% if product.available == false %}
+  <div id="back-in-stock">
+    <input type="email" id="email" placeholder="Enter your email">
+    <button onclick="subscribe()">Notify Me</button>
+  </div>
+
+  <script>
+    function subscribe() {
+      let email = document.getElementById("email").value;
+      let productId = "{{ product.id }}";
+      let productTitle = "{{ product.title }}";
+
+      fetch("https://your-api-url.com/api/notifications", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, productId, productTitle })
+      }).then(response => response.json()).then(data => {
+        alert(data.message);
+      });
+    }
+  </script>
+{% endif %}
