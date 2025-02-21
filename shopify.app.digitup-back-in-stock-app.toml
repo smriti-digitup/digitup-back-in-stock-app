@@ -1,10 +1,10 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "fe4fcac0923fa1c54022a78956a9e198"
+client_id = "5a1fb4b43cf4e3c2475a67a82f8cfa29"
 application_url = "https://example.com/"
 embedded = true
-name = "Digitup-back-in-stock-app"
-handle = "digitup-back-in-stock-app"
+name = "digitup-back-in-stock-app"
+handle = "digitup-back-in-stock-app-1"
 
 [build]
 include_config_on_deploy = true
